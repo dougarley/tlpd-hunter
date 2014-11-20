@@ -1,4 +1,7 @@
+
 exports.detailsWindow = (character) ->
+  detailsController = require('detailsWindowController')
+
   detailsWin = Ti.UI.createWindow(
     backgroundColor : '#c00'
     backgroundImage : 'images/horde.png'
@@ -82,7 +85,7 @@ exports.detailsWindow = (character) ->
   )
 
   characterVyragosaDetails = Ti.UI.createLabel(
-    text : 'Has killed Vyragosa ' + 'X' + ' times since ' + 'TIMESTAMP'
+    text : detailsController.vyragosa_loot(character.feed)
     font :
       fontSize : '16sp'
     left: '20sp', top : '20dp'
@@ -100,7 +103,7 @@ exports.detailsWindow = (character) ->
   )
 
   ## Character Feed content wrapper
-  characterFeed = require('detailsWindowController').feed(character.feed)
+  characterFeed = detailsController.feed(character.feed)
 
   # Character Details elements
   characterDetails.add(characterName)

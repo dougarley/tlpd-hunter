@@ -1,3 +1,15 @@
+exports.vyragosa_loot = (feed) ->
+  text = ''
+
+  if feed.length is 0
+    text = 'Has not looted Vyragosa recently.'
+  else if feed.length is 1
+    text = 'Has recently looted Vyragosa 1 time'
+  else
+    text ='Has recently looted Vyragosa ' + feed.length + ' times'
+
+  return text
+
 exports.feed = (feed) ->
   characterFeed = Ti.UI.createView(
     backgroundColor : '#fafafa'
