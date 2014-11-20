@@ -105,6 +105,20 @@ exports.detailsWindow = (character) ->
   ## Character Feed content wrapper
   characterFeed = detailsController.feed(character.feed)
 
+
+  characterFeedShadow = Ti.UI.createView(
+      width: '100%', height : '3dp',
+      opacity : 0.26
+      backgroundGradient :
+          type : 'linear',
+          startPoint: { x : '0%', y : '0%' },
+          endPoint: { x : '0%', y:  '100%' },
+          colors: [
+              { color: '#000', offset: 0.0},
+              { color: '#eee', offset: 0.5 }
+          ]
+  )
+
   # Character Details elements
   characterDetails.add(characterName)
   characterDetails.add(characterRealm)
@@ -121,6 +135,7 @@ exports.detailsWindow = (character) ->
   # Character Feed
   characterDetailsMain.add(characterFeedHeader)
   characterDetailsMain.add(characterFeed)
+  characterDetailsMain.add(characterFeedShadow)
 
   # Details Window
   characterDetailsScroll.add(characterImage)

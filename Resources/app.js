@@ -38,7 +38,7 @@
     backgroundGradient: {
       type: 'linear',
       startPoint: {
-        x: '0%',
+        x: '0g%',
         y: '0%'
       },
       endPoint: {
