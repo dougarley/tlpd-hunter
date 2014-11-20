@@ -22,14 +22,56 @@
       top: '10dp',
       layout: 'vertical'
     });
-    for (_i = 0, _len = feed.length; _i < _len; _i++) {
-      item = feed[_i];
+    if (feed.length > 0) {
+      for (_i = 0, _len = feed.length; _i < _len; _i++) {
+        item = feed[_i];
+        characterFeedRow = Ti.UI.createView({
+          height: '80dp',
+          backgroundColor: '#FAFAFA'
+        });
+        characterFeedVyragosaKill = Ti.UI.createLabel({
+          text: 'Vyragosa looted',
+          font: {
+            fontSize: '16sp'
+          },
+          height: 'auto',
+          left: '20dp',
+          top: '20dp',
+          color: '#000',
+          touchEnabled: false
+        });
+        characterFeedVyragosaTimestamp = Ti.UI.createLabel({
+          text: item + ' at 11:59PM EST',
+          font: {
+            fontSize: '12sp'
+          },
+          height: 'auto',
+          left: '20dp',
+          bottom: '20dp',
+          color: '#757575',
+          touchEnabled: false
+        });
+        characterFeedRow.add(characterFeedVyragosaKill);
+        characterFeedRow.add(characterFeedVyragosaTimestamp);
+        if (feed.indexOf(item) !== (feed.length - 1)) {
+          divider = Ti.UI.createView({
+            height: '2dp',
+            width: '100%',
+            backgroundColor: '#eee',
+            left: 0,
+            bottom: 0
+          });
+          characterFeedRow.add(divider);
+        }
+        characterFeed.add(characterFeedRow);
+      }
+    } else {
       characterFeedRow = Ti.UI.createView({
-        height: '80dp',
+        height: '60dp',
         backgroundColor: '#FAFAFA'
       });
       characterFeedVyragosaKill = Ti.UI.createLabel({
-        text: 'Vyragosa looted',
+        text: 'No recent activity',
         font: {
           fontSize: '16sp'
         },
@@ -39,27 +81,7 @@
         color: '#000',
         touchEnabled: false
       });
-      characterFeedVyragosaTimestamp = Ti.UI.createLabel({
-        text: item + ' at 11:59PM EST',
-        font: {
-          fontSize: '12sp'
-        },
-        height: 'auto',
-        left: '20dp',
-        bottom: '20dp',
-        color: '#757575',
-        touchEnabled: false
-      });
-      divider = Ti.UI.createView({
-        height: '2dp',
-        width: '100%',
-        backgroundColor: '#eee',
-        left: 0,
-        bottom: 0
-      });
       characterFeedRow.add(characterFeedVyragosaKill);
-      characterFeedRow.add(characterFeedVyragosaTimestamp);
-      characterFeedRow.add(divider);
       characterFeed.add(characterFeedRow);
     }
     return characterFeed;
