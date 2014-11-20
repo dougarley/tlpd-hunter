@@ -98,7 +98,7 @@ exports.detailsWindow = (character) ->
     font :
       fontSize : '16sp'
       fontWeight : 'bold'
-    color : '#757575'
+    color : '#9E9E9E'
     top : '7sp', left : '20dp'
   )
 
@@ -107,16 +107,16 @@ exports.detailsWindow = (character) ->
 
 
   characterFeedShadow = Ti.UI.createView(
-      width: '100%', height : '3dp',
-      opacity : 0.26
-      backgroundGradient :
-          type : 'linear',
-          startPoint: { x : '0%', y : '0%' },
-          endPoint: { x : '0%', y:  '100%' },
-          colors: [
-              { color: '#000', offset: 0.0},
-              { color: '#eee', offset: 0.5 }
-          ]
+    width: '100%', height : '3dp',
+    opacity : 0.26
+    backgroundGradient :
+        type : 'linear',
+        startPoint: { x : '0%', y : '0%' },
+        endPoint: { x : '0%', y:  '100%' },
+        colors: [
+            { color: '#000', offset: 0.0},
+            { color: '#eee', offset: 0.5 }
+        ]
   )
 
   # Character Details elements

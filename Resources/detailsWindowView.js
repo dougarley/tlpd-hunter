@@ -112,7 +112,7 @@
         fontSize: '16sp',
         fontWeight: 'bold'
       },
-      color: '#757575',
+      color: '#9E9E9E',
       top: '7sp',
       left: '20dp'
     });
