@@ -59,21 +59,21 @@ exports.generateView = (characters, table) ->
       character_rows.push(row)
 
   else
-      row = Ti.UI.createTableViewRow(
-        height: '300dp',
-        backgroundColor: '#EEE',
-      )
+    row = Ti.UI.createTableViewRow(
+      height: '300dp',
+      backgroundColor: '#EEE',
+    )
 
-      emptyLabel = Ti.UI.createLabel(
-        text : 'No character data.\nAdd some to start collecting TLPD data!'
-        font :
-            fontSize : '16dp'
-            fontWeight : 'bold'
-        color : '#9E9E9E'
-        textAlign : Titanium.UI.TEXT_ALIGNMENT_CENTER
-      )
+    emptyLabel = Ti.UI.createLabel(
+      text : 'No character data.\nAdd some to start collecting TLPD data!'
+      font :
+          fontSize : '16dp'
+          fontWeight : 'bold'
+      color : '#9E9E9E'
+      textAlign : Titanium.UI.TEXT_ALIGNMENT_CENTER
+    )
 
-      row.add(emptyLabel)
-      character_rows.push(row)
+    row.add(emptyLabel)
+    character_rows.push(row)
 
-    table.setData(character_rows)
+  table.setData(character_rows)
