@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- File created by the Android Action Bar Style Generator
+
+     Copyright (C) 2011 The Android Open Source Project
+     Copyright (C) 2012 readyState Software Ltd
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources>
+
+    <style name="Theme.Tlpd" parent="@style/Theme.AppCompat.Light">
+        <item name="actionBarItemBackground">@drawable/selectable_background_tlpd</item>
+        <item name="popupMenuStyle">@style/PopupMenu.Tlpd</item>
+        <item name="dropDownListViewStyle">@style/DropDownListView.Tlpd</item>
+        <item name="actionBarTabStyle">@style/ActionBarTabStyle.Tlpd</item>
+        <item name="actionDropDownStyle">@style/DropDownNav.Tlpd</item>
+        <item name="actionBarStyle">@style/ActionBar.Solid.Tlpd</item>
+        <item name="actionModeBackground">@drawable/cab_background_top_tlpd</item>
+        <item name="actionModeSplitBackground">@drawable/cab_background_bottom_tlpd</item>
+        <item name="actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Tlpd</item>
+
+        
+    </style>
+    
+    <style name="Theme.Tlpd.ActionBarHidden" parent="@style/Theme.AppCompat.Light">
+        <item name="actionBarItemBackground">@drawable/selectable_background_tlpd</item>
+        <item name="popupMenuStyle">@style/PopupMenu.Tlpd</item>
+        <item name="dropDownListViewStyle">@style/DropDownListView.Tlpd</item>
+        <item name="actionBarTabStyle">@style/ActionBarTabStyle.Tlpd</item>
+        <item name="actionDropDownStyle">@style/DropDownNav.Tlpd</item>
+        <item name="actionBarStyle">@style/ActionBar.Solid.Tlpd</item>
+        <item name="actionModeBackground">@drawable/cab_background_top_tlpd</item>
+        <item name="actionModeSplitBackground">@drawable/cab_background_bottom_tlpd</item>
+        <item name="actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Tlpd</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="ActionBar.Solid.Tlpd" parent="@style/Widget.AppCompat.Light.ActionBar.Solid">
+        <item name="background">@drawable/ab_solid_tlpd</item>
+        <item name="backgroundStacked">@drawable/ab_stacked_solid_tlpd</item>
+        <item name="backgroundSplit">@drawable/ab_bottom_solid_tlpd</item>
+        <item name="progressBarStyle">@style/ProgressBar.Tlpd</item>
+    </style>
+
+    <style name="ActionBar.Transparent.Tlpd" parent="@style/Widget.AppCompat.Light.ActionBar">
+        <item name="background">@drawable/ab_transparent_tlpd</item>
+        <item name="progressBarStyle">@style/ProgressBar.Tlpd</item>
+    </style>
+  
+    <style name="PopupMenu.Tlpd" parent="@style/Widget.AppCompat.Light.PopupMenu">	
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_tlpd</item>	
+    </style>
+	
+    <style name="DropDownListView.Tlpd" parent="@style/Widget.AppCompat.Light.ListView.DropDown">
+        <item name="android:listSelector">@drawable/selectable_background_tlpd</item>
+    </style>
+
+    <style name="ActionBarTabStyle.Tlpd" parent="@style/Widget.AppCompat.Light.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator_ab_tlpd</item>
+    </style>
+	
+    <style name="DropDownNav.Tlpd" parent="@style/Widget.AppCompat.Light.Spinner.DropDown.ActionBar">
+        <item name="android:background">@drawable/spinner_background_ab_tlpd</item>
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_tlpd</item>
+        <item name="android:dropDownSelector">@drawable/selectable_background_tlpd</item>
+    </style>
+    
+    <style name="ProgressBar.Tlpd" parent="@style/Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal_tlpd</item>
+    </style>
+    
+    <style name="ActionButton.CloseMode.Tlpd" parent="@style/Widget.AppCompat.Light.ActionButton.CloseMode">
+        <item name="android:background">@drawable/btn_cab_done_tlpd</item>
+    </style>
+    
+    <!-- this style is only referenced in a Light.DarkActionBar based theme -->
+    <style name="Theme.Tlpd.Widget" parent="@style/Theme.AppCompat">
+        <item name="popupMenuStyle">@style/PopupMenu.Tlpd</item>
+        <item name="dropDownListViewStyle">@style/DropDownListView.Tlpd</item>
+    </style>
+
+</resources>
