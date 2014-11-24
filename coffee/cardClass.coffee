@@ -12,6 +12,11 @@ class Card
         layout : 'vertical'
     )
 
+    main.top = card.top or undefined
+    main.left = card.left or undefined
+    main.right = card.right or undefined
+    main.bottom = card.bottom or undefined
+
     # Card wrapper to provide padding
     @wrapper = Ti.UI.createView(
         backgroundColor : '#fafafa'

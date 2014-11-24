@@ -11,6 +11,10 @@
         height: Ti.UI.SIZE,
         layout: 'vertical'
       });
+      main.top = card.top || void 0;
+      main.left = card.left || void 0;
+      main.right = card.right || void 0;
+      main.bottom = card.bottom || void 0;
       this.wrapper = Ti.UI.createView({
         backgroundColor: '#fafafa',
         width: '100%',
