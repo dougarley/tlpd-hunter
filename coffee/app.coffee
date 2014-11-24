@@ -26,23 +26,23 @@ addButton = new addButtonCreator(
     size : '60dp'
 )
 
-charactersTableShadow = Ti.UI.createView(
-    width: '100%', height : '3dp',
-    opacity : 0.26
-    backgroundGradient :
-        type : 'linear',
-        startPoint: { x : '0%', y : '0%' },
-        endPoint: { x : '0%', y:  '100%' },
-        colors: [
-            { color: '#000', offset: 0.0},
-            { color: '#eee', offset: 0.5 }
-        ]
-)
+# charactersTableShadow = Ti.UI.createView(
+#     width: '100%', height : '3dp',
+#     opacity : 0.26
+#     backgroundGradient :
+#         type : 'linear',
+#         startPoint: { x : '0%', y : '0%' },
+#         endPoint: { x : '0%', y:  '100%' },
+#         colors: [
+#             { color: '#000', offset: 0.0},
+#             { color: '#eee', offset: 0.5 }
+#         ]
+# )
 
 charactersTable = Ti.UI.createTableView()
 
 mainWindow.add(charactersTable)
-mainWindow.add(charactersTableShadow)
+# mainWindow.add(charactersTableShadow)
 mainWindow.add(addButton.create())
 
 
