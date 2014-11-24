@@ -8,6 +8,8 @@
       this.elements = [];
       Ti.API.debug('Creating main card container');
       this.main = Ti.UI.createView({
+        top: 0,
+        left: 0,
         width: '100%',
         height: Ti.UI.SIZE,
         layout: 'vertical'

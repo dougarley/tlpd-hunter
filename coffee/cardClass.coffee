@@ -8,6 +8,7 @@ class Card
     # Main card container
     Ti.API.debug 'Creating main card container'
     @main = Ti.UI.createView(
+        top : 0, left : 0
         width: '100%', height: Ti.UI.SIZE
         layout : 'vertical'
     )
