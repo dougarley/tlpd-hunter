@@ -4,6 +4,8 @@
 
   Card = (function() {
     function Card(card) {
+      this.elements = [];
+      this.padding = card.padding || 0;
       this.main = Ti.UI.createView({
         width: '100%',
         height: Ti.UI.SIZE,
@@ -17,8 +19,8 @@
       this.content = Ti.UI.createView({
         width: '100%',
         height: Ti.UI.SIZE,
-        top: '20dp',
-        bottom: '20dp',
+        top: this.padding,
+        bottom: this.padding,
         layout: 'vertical'
       });
       this.dropshadow = Ti.UI.createView({
@@ -46,7 +48,6 @@
           ]
         }
       });
-      this.elements = [];
       this.add = function(element) {
         return this.elements.push(element);
       };
