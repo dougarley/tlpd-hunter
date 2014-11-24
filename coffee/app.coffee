@@ -6,7 +6,7 @@ mainWindow = Ti.UI.createWindow(
     title : 'Characters'
     navTintColor : '#FFEA00'
     backgroundColor : '#EEE'
-    layout : 'vertical'
+    # layout : 'vertical'
 )
 
 mainWindow.addEventListener("open", () ->

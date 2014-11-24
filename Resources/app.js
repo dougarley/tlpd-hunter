@@ -9,8 +9,7 @@
   mainWindow = Ti.UI.createWindow({
     title: 'Characters',
     navTintColor: '#FFEA00',
-    backgroundColor: '#EEE',
-    layout: 'vertical'
+    backgroundColor: '#EEE'
   });
 
   mainWindow.addEventListener("open", function() {
@@ -38,7 +37,7 @@
     backgroundGradient: {
       type: 'linear',
       startPoint: {
-        x: '0g%',
+        x: '0%',
         y: '0%'
       },
       endPoint: {
