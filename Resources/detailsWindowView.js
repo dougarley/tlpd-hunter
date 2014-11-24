@@ -5,7 +5,7 @@
   Card = require('cardClass').Card;
 
   exports.detailsWindow = function(character) {
-    var characterDetails, characterDetailsMain, characterDetailsScroll, characterFeed, characterFeedHeader, characterFeedShadow, characterImage, characterInfo, characterName, characterRealm, characterVyragosaDetails, detailsController, detailsWin;
+    var characterDetails, characterDetailsMain, characterDetailsScroll, characterFeed, characterFeedHeader, characterImage, characterInfo, characterName, characterRealm, characterVyragosaDetails, detailsController, detailsWin;
     detailsController = require('detailsWindowController');
     detailsWin = Ti.UI.createWindow({
       backgroundColor: '#c00',
@@ -87,39 +87,13 @@
       left: '20dp'
     });
     characterFeed = detailsController.feed(character.feed);
-    characterFeedShadow = Ti.UI.createView({
-      width: '100%',
-      height: '3dp',
-      opacity: 0.26,
-      backgroundGradient: {
-        type: 'linear',
-        startPoint: {
-          x: '0%',
-          y: '0%'
-        },
-        endPoint: {
-          x: '0%',
-          y: '100%'
-        },
-        colors: [
-          {
-            color: '#000',
-            offset: 0.0
-          }, {
-            color: '#eee',
-            offset: 0.5
-          }
-        ]
-      }
-    });
     characterDetails.add(characterName);
     characterDetails.add(characterRealm);
     characterDetails.add(characterInfo);
     characterDetails.add(characterVyragosaDetails);
     characterDetailsMain.add(characterDetails.create());
     characterDetailsMain.add(characterFeedHeader);
-    characterDetailsMain.add(characterFeed);
-    characterDetailsMain.add(characterFeedShadow);
+    characterDetailsMain.add(characterFeed.create());
     characterDetailsScroll.add(characterImage);
     characterDetailsScroll.add(characterDetailsMain);
     detailsWin.add(characterDetailsScroll);

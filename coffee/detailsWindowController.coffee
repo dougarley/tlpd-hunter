@@ -1,3 +1,5 @@
+Card = require('cardClass').Card
+
 exports.vyragosa_loot = (feed) ->
   text = ''
 
@@ -11,11 +13,8 @@ exports.vyragosa_loot = (feed) ->
   return text
 
 exports.feed = (feed) ->
-  characterFeed = Ti.UI.createView(
-    backgroundColor : '#fafafa'
-    width: '100%', height: Ti.UI.SIZE
+  characterFeed = new Card(
     top : '10dp'
-    layout : 'vertical'
   )
 
   if feed.length > 0
