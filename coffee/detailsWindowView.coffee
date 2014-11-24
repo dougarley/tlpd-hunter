@@ -7,7 +7,7 @@ exports.detailsWindow = (character) ->
     backgroundImage : 'images/horde.png'
   )
 
-  # Character Details view
+  # Overall Window Scroll View
   characterDetailsScroll = Ti.UI.createScrollView
     width : Ti.UI.SIZE
     height : Ti.UI.FILL
@@ -23,6 +23,7 @@ exports.detailsWindow = (character) ->
     zIndex : 2
   )
 
+  # Character Details Card
   characterDetailsMain = Ti.UI.createView(
     width: Ti.UI.SIZE
     left : 0, top: '100dp', bottom : 0
