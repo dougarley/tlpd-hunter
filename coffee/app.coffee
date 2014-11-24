@@ -1,6 +1,7 @@
 Titanium.UI.setBackgroundColor '#EEE'
 
 addButtonCreator = require('addButtonClass').AddButton
+Card = require('cardClass').Card
 
 mainWindow = Ti.UI.createWindow(
     title : 'Characters'
@@ -27,7 +28,13 @@ addButton = new addButtonCreator(
 
 charactersTable = Ti.UI.createTableView()
 
-mainWindow.add(charactersTable)
+charactersTableCard = new Card(
+    top : 0, left : 0
+)
+
+charactersTableCard.add(charactersTable)
+# mainWindow.add(charactersTable)
+mainWindow.add(charactersTableCard.create())
 mainWindow.add(addButton.create())
 
 

@@ -4,22 +4,29 @@
 
   Card = (function() {
     function Card(card) {
+      Ti.API.debug('Creating Card');
       this.elements = [];
-      this.padding = card.padding || 0;
+      Ti.API.debug('Creating main card container');
       this.main = Ti.UI.createView({
         width: '100%',
         height: Ti.UI.SIZE,
         layout: 'vertical'
       });
-      main.top = card.top || void 0;
-      main.left = card.left || void 0;
-      main.right = card.right || void 0;
-      main.bottom = card.bottom || void 0;
+      Ti.API.debug('Checking for arguments');
+      if (card) {
+        this.padding = card.padding || 0;
+        this.main.top = card.top || void 0;
+        this.main.left = card.left || void 0;
+        this.main.right = card.right || void 0;
+        this.main.bottom = card.bottom || void 0;
+      }
+      Ti.API.debug('Creating card wrapper');
       this.wrapper = Ti.UI.createView({
         backgroundColor: '#fafafa',
         width: '100%',
         height: Ti.UI.SIZE
       });
+      Ti.API.debug('Creating content area');
       this.content = Ti.UI.createView({
         width: '100%',
         height: Ti.UI.SIZE,
@@ -27,6 +34,7 @@
         bottom: this.padding,
         layout: 'vertical'
       });
+      Ti.API.debug('Creating dropshadow');
       this.dropshadow = Ti.UI.createView({
         width: '100%',
         height: '3dp',
@@ -53,10 +61,12 @@
         }
       });
       this.add = function(element) {
+        Ti.API.debug('Adding element ' + JSON.stringify(element));
         return this.elements.push(element);
       };
       this.create = function() {
         var element, _i, _len, _ref;
+        Ti.API.debug('Rendering card');
         _ref = this.elements;
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           element = _ref[_i];
