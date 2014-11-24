@@ -1,6 +1,6 @@
 Titanium.UI.setBackgroundColor '#EEE'
 
-addButtonCreator = require('addButtonClass').AddButton
+RoundButton = require('addButtonClass').AddButton
 Card = require('cardClass').Card
 
 mainWindow = Ti.UI.createWindow(
@@ -20,7 +20,7 @@ mainWindow.addEventListener("open", () ->
         actionBar.logo = 'images/plus.png'
 )
 
-addButton = new addButtonCreator(
+addButton = new RoundButton(
     right : '26dp',
     bottom : '26dp',
     size : '60dp'
