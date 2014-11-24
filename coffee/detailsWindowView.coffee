@@ -1,4 +1,6 @@
 
+Card = require('cardClass').Card
+
 exports.detailsWindow = (character) ->
   detailsController = require('detailsWindowController')
 
@@ -31,30 +33,8 @@ exports.detailsWindow = (character) ->
     layout : 'vertical'
   )
 
-  ## Character Details content wrapper
-  characterDetailsWrapper = Ti.UI.createView(
-    backgroundColor : '#fafafa'
-    width: '100%', height: Ti.UI.SIZE
-  )
-
-  ## Character Details content element with padding
-  characterDetails = Ti.UI.createView(
-    width: '100%', height : Ti.UI.SIZE
-    top: '20dp', bottom: '20dp'
-    layout : 'vertical'
-  )
-
-  characterDetailsShadow = Ti.UI.createView(
-    width: '100%', height : '3dp',
-    opacity : 0.26
-    backgroundGradient :
-        type : 'linear',
-        startPoint: { x : '0%', y : '0%' },
-        endPoint: { x : '0%', y:  '100%' },
-        colors: [
-            { color: '#000', offset: 0.0},
-            { color: '#eee', offset: 0.5 }
-        ]
+  characterDetails = new Card(
+    padding : '20dp'
   )
 
   # Character Details elements
@@ -125,11 +105,7 @@ exports.detailsWindow = (character) ->
   characterDetails.add(characterRealm)
   characterDetails.add(characterInfo)
   characterDetails.add(characterVyragosaDetails)
-
-  # Character Details panel
-  characterDetailsWrapper.add(characterDetails)
-  characterDetailsMain.add(characterDetailsWrapper)
-  characterDetailsMain.add(characterDetailsShadow)
+  characterDetailsMain.add(characterDetails.create())
 
   # Character Feed elements
 
