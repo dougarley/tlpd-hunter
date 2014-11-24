@@ -41,8 +41,8 @@ exports.detailsWindow = (character) ->
   characterName = Ti.UI.createLabel(
     text : character.name
     font:
-        fontSize:'24sp'
-        fontWeight: 'bold'
+      fontSize:'24sp'
+      fontWeight: 'bold'
     height:'auto'
     left:'20dp', top: '10dp'
     color:'#000'
@@ -51,7 +51,7 @@ exports.detailsWindow = (character) ->
   characterRealm = Ti.UI.createLabel(
     text : character.realm
     font:
-        fontSize:'16sp'
+      fontSize:'16sp'
     height:'auto'
     left:'20dp', top: 0
     color:'#757575'
@@ -91,13 +91,13 @@ exports.detailsWindow = (character) ->
     width: '100%', height : '3dp',
     opacity : 0.26
     backgroundGradient :
-        type : 'linear',
-        startPoint: { x : '0%', y : '0%' },
-        endPoint: { x : '0%', y:  '100%' },
-        colors: [
-            { color: '#000', offset: 0.0},
-            { color: '#eee', offset: 0.5 }
-        ]
+      type : 'linear',
+      startPoint: { x : '0%', y : '0%' },
+      endPoint: { x : '0%', y:  '100%' },
+      colors: [
+          { color: '#000', offset: 0.0},
+          { color: '#eee', offset: 0.5 }
+      ]
   )
 
   # Character Details elements
@@ -123,35 +123,35 @@ exports.detailsWindow = (character) ->
   detailsWin.addEventListener("open", () ->
 
     if Ti.Platform.osname = "android"
-        if ! detailsWin.activity
-          Ti.API.error "Can't access action bar on a lightweight window."
-        else
-          actionBar = detailsWin.activity.actionBar
+      if ! detailsWin.activity
+        Ti.API.error "Can't access action bar on a lightweight window."
+      else
+        actionBar = detailsWin.activity.actionBar
 
-          if actionBar
-            actionBar.displayHomeAsUp = true
-            actionBar.title = character.name
-            actionBar.subtitle = character.realm
-            actionBar.onHomeIconItemSelected = () ->
-                detailsWin.close()
+        if actionBar
+          actionBar.displayHomeAsUp = true
+          actionBar.title = character.name
+          actionBar.subtitle = character.realm
+          actionBar.onHomeIconItemSelected = () ->
+              detailsWin.close()
 
-            detailsWin.activity.onCreateOptionsMenu = (e) ->
-              menu = e.menu
-              EditButton = menu.add(
-                title: "Edit",
-                # icon:  "item1.png",
-                showAsAction: Ti.Android.SHOW_AS_ACTION_IF_ROOM
-              )
+          detailsWin.activity.onCreateOptionsMenu = (e) ->
+            menu = e.menu
+            EditButton = menu.add(
+              title: "Edit",
+              # icon:  "item1.png",
+              showAsAction: Ti.Android.SHOW_AS_ACTION_IF_ROOM
+            )
 
-              deleteButton = menu.add(
-                title: "Delete",
-                # icon:  "item1.png",
-                showAsAction: Ti.Android.SHOW_AS_ACTION_IF_ROOM
-              )
+            deleteButton = menu.add(
+              title: "Delete",
+              # icon:  "item1.png",
+              showAsAction: Ti.Android.SHOW_AS_ACTION_IF_ROOM
+            )
 
-              deleteButton.addEventListener("click", (e) ->
-                Ti.API.debug "I was clicked"
-              )
+            deleteButton.addEventListener("click", (e) ->
+              Ti.API.debug "I was clicked"
+            )
   )
 
   detailsWin.open()
