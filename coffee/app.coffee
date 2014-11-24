@@ -33,7 +33,6 @@ charactersTableCard = new Card(
 )
 
 charactersTableCard.add(charactersTable)
-# mainWindow.add(charactersTable)
 mainWindow.add(charactersTableCard.create())
 mainWindow.add(addButton.create())
 
