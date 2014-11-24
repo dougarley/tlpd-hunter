@@ -33,13 +33,6 @@
           color: '#757575',
           touchEnabled: false
         });
-        divider = Ti.UI.createView({
-          height: '2dp',
-          width: '100%',
-          backgroundColor: '#eee',
-          left: 0,
-          bottom: 0
-        });
         thumbnail = Ti.UI.createImageView({
           height: '40dp',
           width: '40dp',
@@ -51,10 +44,26 @@
         if (character.thumbnail) {
           thumbnail.setImage(character.thumbnail);
         }
+        divider = Ti.UI.createView({
+          height: '2dp',
+          width: '100%',
+          backgroundColor: '#eee',
+          left: 0,
+          bottom: 0
+        });
+        if (characters.indexOf(character) !== (characters.length - 1)) {
+          divider = Ti.UI.createView({
+            height: '2dp',
+            width: '100%',
+            backgroundColor: '#eee',
+            left: 0,
+            bottom: 0
+          });
+          row.add(divider);
+        }
         row.add(charName);
         row.add(charServer);
         row.add(thumbnail);
-        row.add(divider);
         character_rows.push(row);
       }
     } else {

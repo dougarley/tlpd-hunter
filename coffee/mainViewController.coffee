@@ -33,13 +33,6 @@ exports.generateView = (characters, table) ->
           touchEnabled:false
       )
 
-      divider = Ti.UI.createView(
-          height: '2dp',
-          width: '100%',
-          backgroundColor : '#eee',
-          left: 0, bottom: 0
-      )
-
       thumbnail = Ti.UI.createImageView(
           height: '40dp',
           width: '40dp',
@@ -51,10 +44,27 @@ exports.generateView = (characters, table) ->
 
       if character.thumbnail then thumbnail.setImage(character.thumbnail)
 
+      divider = Ti.UI.createView(
+          height: '2dp',
+          width: '100%',
+          backgroundColor : '#eee',
+          left: 0, bottom: 0
+      )
+
+      if characters.indexOf(character) isnt (characters.length - 1)
+
+        divider = Ti.UI.createView(
+          height: '2dp',
+          width: '100%',
+          backgroundColor : '#eee',
+          left: 0, bottom: 0
+        )
+
+        row.add(divider)
+
       row.add(charName)
       row.add(charServer)
       row.add(thumbnail)
-      row.add(divider)
 
       character_rows.push(row)
 
