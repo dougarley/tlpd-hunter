@@ -37,8 +37,11 @@ class AddButton
         height : '44dp', width : '44dp'
     )
     @create = () ->
-      @addButton.add(@icon)
-      @border.add(@addButton)
-      @border
+        @addButton.add(@icon)
+        @border.add(@addButton)
+        @border
+
+    @addEventListener = (type, callback) ->
+        @border.addEventListener(type, callback)
 
 exports.AddButton = AddButton

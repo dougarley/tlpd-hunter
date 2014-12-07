@@ -66,6 +66,9 @@
         this.border.add(this.addButton);
         return this.border;
       };
+      this.addEventListener = function(type, callback) {
+        return this.border.addEventListener(type, callback);
+      };
     }
 
     return AddButton;
