@@ -21,6 +21,16 @@
       width: Ti.UI.FILL,
       title: 'Add Character'
     });
+    addWin.add(addButton);
+    addButton.addEventListener('click', function(e) {
+      var toast;
+      toast = Ti.UI.createNotification({
+        message: 'Character has been added.',
+        duration: Ti.UI.NOTIFICATION_DURATION_SHORT
+      });
+      addWin.close();
+      return toast.show();
+    });
     addWin.addEventListener("open", function() {
       var actionBar;
       if (Ti.Platform.osname = "android") {

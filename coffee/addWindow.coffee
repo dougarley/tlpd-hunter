@@ -15,6 +15,19 @@ exports.addWindow = () ->
     title : 'Add Character'
   )
 
+  addWin.add(addButton)
+
+  addButton.addEventListener('click', (e) ->
+    toast = Ti.UI.createNotification(
+      message : 'Character has been added.'
+      duration : Ti.UI.NOTIFICATION_DURATION_SHORT
+    )
+
+    addWin.close()
+
+    toast.show();
+  )
+
   addWin.addEventListener("open", () ->
     if Ti.Platform.osname = "android"
       if ! addWin.activity
