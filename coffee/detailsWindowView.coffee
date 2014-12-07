@@ -59,7 +59,7 @@ exports.detailsWindow = (character) ->
   )
 
   characterInfo = Ti.UI.createLabel(
-    text : 'Level 100, Tauren Priest'
+    text : 'Level ' + character.level + ', ' + character.race + ' ' + character.class
     font :
       fontSize : '16sp'
     left: '20dp', top : '20dp'

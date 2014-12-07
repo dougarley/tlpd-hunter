@@ -59,7 +59,7 @@
       color: '#757575'
     });
     characterInfo = Ti.UI.createLabel({
-      text: 'Level 100, Tauren Priest',
+      text: 'Level ' + character.level + ', ' + character.race + ' ' + character["class"],
       font: {
         fontSize: '16sp'
       },
