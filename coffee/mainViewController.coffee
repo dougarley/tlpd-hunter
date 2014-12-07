@@ -39,7 +39,8 @@ exports.generateView = (characters, table) ->
           backgroundColor : '#ccc',
           borderRadius : '20dp',
           right : '20dp',
-          top : '20dp'
+          top : '20dp',
+          touchEnabled:false
       )
 
       if character.thumbnail then thumbnail.setImage(character.thumbnail)
