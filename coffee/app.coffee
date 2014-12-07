@@ -54,7 +54,7 @@ recentKillCard = new Card(
 )
 
 recentDataTemp = Ti.UI.createLabel(
-  text : 'Vyragosa has not been looted recently.'
+  text : 'No recent activity.'
   font :
     fontSize : '16sp'
   left: '20dp', top : 0
@@ -93,11 +93,15 @@ mainWindow.add(addButton.create())
 generateView = require('mainViewController').generateView
 character_data = require('tempdata').characters
 detailsWindow = require('detailsWindowView').detailsWindow
+addWindow = require('addWindow').addWindow
 
 charactersTable.addEventListener('click', (e) ->
   detailsWindow(e.source.details)
 )
 
+addButton.addEventListener('click', (e) ->
+  addWindow()
+)
 
 generateView(character_data, charactersTable)
 
