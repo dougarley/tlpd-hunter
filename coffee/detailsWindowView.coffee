@@ -28,7 +28,8 @@ exports.detailsWindow = (character) ->
   # Character Details Card
   characterDetailsMain = Ti.UI.createView(
     width: Ti.UI.SIZE
-    left : 0, top: '100dp', bottom : 0
+    left : 0, bottom : 0,
+    top: '100dp',
     backgroundColor : '#eee'
     layout : 'vertical'
   )
@@ -61,7 +62,7 @@ exports.detailsWindow = (character) ->
     text : 'Level 100, Tauren Priest'
     font :
       fontSize : '16sp'
-    left: '20sp', top : '20dp'
+    left: '20dp', top : '20dp'
     color : '#000'
   )
 
@@ -80,7 +81,7 @@ exports.detailsWindow = (character) ->
       fontSize : '16sp'
       fontWeight : 'bold'
     color : '#9E9E9E'
-    top : '7sp', left : '20dp'
+    top : '7dp', left : '20dp'
   )
 
   ## Character Feed content wrapper

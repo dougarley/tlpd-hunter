@@ -9,6 +9,18 @@ mainWindow = Ti.UI.createWindow(
   backgroundColor : '#EEE'
 )
 
+mainScroll = Ti.UI.createScrollView(
+  width : Ti.UI.SIZE
+  height : Ti.UI.FILL
+  contentHeight : 'auto'
+)
+
+mainContent = Ti.UI.createView(
+  width: Ti.UI.SIZE
+  left : 0, top : 0,
+  layout : 'vertical'
+)
+
 mainWindow.addEventListener("open", () ->
   if ! mainWindow.activity
     Ti.API.error "Can't access action bar on a lightweight window."
@@ -26,14 +38,55 @@ addButton = new RoundButton(
   size : '60dp'
 )
 
+# Recent Kill
+recentKillHeader = Ti.UI.createLabel(
+  text : 'Recent Activity'
+  font :
+    fontSize : '16sp'
+    fontWeight : 'bold'
+  color : '#9E9E9E'
+  top : '7sp', left : '20dp'
+)
+
+recentKillCard = new Card(
+  top : '10dp', left : 0
+  padding : '20dp'
+)
+
+recentDataTemp = Ti.UI.createLabel(
+  text : 'Vyragosa has not been looted recently.'
+  font :
+    fontSize : '16sp'
+  left: '20dp', top : 0
+  color : '#000'
+)
+
+recentKillCard.add(recentDataTemp)
+
+# Characters List
+charactersTableHeader = Ti.UI.createLabel(
+  text : 'Characters'
+  font :
+    fontSize : '16sp'
+    fontWeight : 'bold'
+  color : '#9E9E9E'
+  top : '7sp', left : '20dp'
+)
+
 charactersTable = Ti.UI.createTableView()
 
 charactersTableCard = new Card(
-  top : 0, left : 0
+  top : '10dp', left : 0
 )
 
 charactersTableCard.add(charactersTable)
-mainWindow.add(charactersTableCard.create())
+
+mainContent.add(recentKillHeader)
+mainContent.add(recentKillCard.create())
+mainContent.add(charactersTableHeader)
+mainContent.add(charactersTableCard.create())
+
+mainWindow.add(mainContent)
 mainWindow.add(addButton.create())
 
 

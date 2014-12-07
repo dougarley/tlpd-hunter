@@ -29,8 +29,8 @@
     characterDetailsMain = Ti.UI.createView({
       width: Ti.UI.SIZE,
       left: 0,
-      top: '100dp',
       bottom: 0,
+      top: '100dp',
       backgroundColor: '#eee',
       layout: 'vertical'
     });
@@ -63,7 +63,7 @@
       font: {
         fontSize: '16sp'
       },
-      left: '20sp',
+      left: '20dp',
       top: '20dp',
       color: '#000'
     });
@@ -83,7 +83,7 @@
         fontWeight: 'bold'
       },
       color: '#9E9E9E',
-      top: '7sp',
+      top: '7dp',
       left: '20dp'
     });
     characterFeed = detailsController.feed(character.feed);
