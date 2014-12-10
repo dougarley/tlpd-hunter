@@ -5,23 +5,41 @@
   Card = require('cardClass').Card;
 
   exports.addWindow = function() {
-    var addButton, addCard, addWin;
+    var addButton, addCard, addWin, charNameInput, charRealmInput;
     addWin = Ti.UI.createWindow({
-      backgroundColor: "#EEE"
+      backgroundColor: "#EEE",
+      layout: 'vertical'
     });
     addCard = new Card({
       top: 0,
       left: 0,
       padding: '20dp'
     });
+    charNameInput = Ti.UI.createTextField({
+      left: '20dp',
+      right: '20dp',
+      hintText: 'Character Name',
+      width: Ti.UI.FILL
+    });
+    charRealmInput = Ti.UI.createTextField({
+      left: '20dp',
+      right: '20dp',
+      top: '7dp',
+      hintText: 'Character Realm',
+      width: Ti.UI.FILL
+    });
     addButton = Ti.UI.createButton({
       left: '20dp',
       right: '20dp',
+      top: '7dp',
       height: Ti.UI.SIZE,
       width: Ti.UI.FILL,
       title: 'Add Character'
     });
-    addWin.add(addButton);
+    addCard.add(charNameInput);
+    addCard.add(charRealmInput);
+    addCard.add(addButton);
+    addWin.add(addCard.create());
     addButton.addEventListener('click', function(e) {
       var toast;
       toast = Ti.UI.createNotification({
