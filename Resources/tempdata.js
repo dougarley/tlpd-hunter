@@ -9,7 +9,7 @@
       race: 'Tauren',
       "class": 'Priest',
       thumbnail: 'http://us.battle.net/static-render/us/illidan/63/20492351-avatar.jpg',
-      feed: ['123456', '789012', '345678']
+      feed: ['123456', '789012', '345678', '123456', '789012', '345678', '123456', '789012', '345678', '123456', '789012', '345678']
     }, {
       name: 'Fireswift',
       realm: 'Illidan',

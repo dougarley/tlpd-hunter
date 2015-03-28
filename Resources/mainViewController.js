@@ -38,7 +38,7 @@
           width: '40dp',
           backgroundColor: '#ccc',
           borderRadius: '20dp',
-          right: '20dp',
+          left: '20dp',
           top: '20dp',
           touchEnabled: false
         });
@@ -57,7 +57,7 @@
             height: '2dp',
             width: '100%',
             backgroundColor: '#eee',
-            left: 0,
+            left: '80dp',
             bottom: 0
           });
           row.add(divider);

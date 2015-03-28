@@ -42,7 +42,7 @@
     <android xmlns:android="http://schemas.android.com/apk/res/android">
         <manifest>
             <application android:theme="@style/Theme.Tlpd"/>
-	        <!-- <application android:theme="@style/Theme.Tlpd.ActionBarHidden"/> -->
+            <!-- <application android:theme="@style/Theme.Tlpd.ActionBarHidden"/> -->
             <uses-sdk android:targetSdkVersion="19"/>
         </manifest>
     </android>
@@ -62,5 +62,5 @@
         <target device="iphone">false</target>
         <target device="mobileweb">false</target>
     </deployment-targets>
-    <sdk-version>3.4.0.GA</sdk-version>
+    <sdk-version>3.4.1.GA</sdk-version>
 </ti:app>

@@ -38,7 +38,7 @@ exports.generateView = (characters, table) ->
           width: '40dp',
           backgroundColor : '#ccc',
           borderRadius : '20dp',
-          right : '20dp',
+          left : '20dp',
           top : '20dp',
           touchEnabled:false
       )
@@ -58,7 +58,7 @@ exports.generateView = (characters, table) ->
           height: '2dp',
           width: '100%',
           backgroundColor : '#eee',
-          left: 0, bottom: 0
+          left: '80dp', bottom: 0
         )
 
         row.add(divider)
